@@ -1,0 +1,6 @@
+Följande kriterier ska vara uppfyllda för modalfönster:
+
+1 Sätt fokus på modalfönstrets stäng-knapp när fönstret öppnas.
+2 Säkerställ att användaren kan navigera till och från modalfönstret med hjälpmedel som tangentbordet.
+3 Fönstret ska gå att stängas med ESC-knapp /DONE
+4 Fokus ska gå tillbaka till öppna-knappen när fönstret stängs./DONE
