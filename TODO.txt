@@ -11,3 +11,13 @@ Fönstret ska kunna öppnas med en knapp på sidan.
 
 3- Tillgänglig hamburgarmeny Skapa en tillgänglig hamburgarmeny, 
 som ska används för att visa och dölja navigeringen i html-koden här nedanför.
+
+<button id="menuButton" >Meny</button>
+<nav id="menuContent">
+  <ul>
+    <li><a href="#">Hem</a></li>
+    <li><a href="#">Om oss</a></li>
+    <li><a href="#">Tjänster</a></li>
+    <li><a href="#">Kontakt</a></li>
+  </ul>
+</nav>
