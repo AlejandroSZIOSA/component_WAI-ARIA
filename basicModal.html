@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button data-open-modal>Open</button>
+
+    <dialog data-modal>
+      <div>This modal</div>
+      <button data-close-modal>Close</button>
+    </dialog>
+
+    <script>
+      const openBtn = document.querySelector("[data-open-modal]");
+      const closeBtn = document.querySelector("[data-close-modal]");
+      const modal = document.querySelector("[data-modal]");
+
+      openBtn.addEventListener("click", () => {
+        modal.showModal(); //specific metod for modals
+        /* *showModal() = block the back window
+         *show()= just show an windows */
+      });
+
+      closeBtn.addEventListener("click", () => {
+        modal.close(); //specific metod for modals
+      });
+    </script>
+  </body>
+</html>

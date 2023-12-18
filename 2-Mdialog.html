@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width='device-width', initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <head>
+      <h1>Components WAI-ARIA</h1>
+    </head>
+    <main>
+      <h2>2-Modal with dialog</h2>
+      <button data-open-modal>Open Modal</button>
+      <dialog id="accessibleDialog">
+        <h2>Exempel på tillgängligt modalfönster med &lt;dialog&gt;</h2>
+        <p>Här är innehållet i modalfönstret.</p>
+        <form>
+          <label>Your name</label>
+          <input type="text" /><br />
+        </form>
+        <button tabindex="1" id="closeDialogBtn">Stäng</button>
+      </dialog>
+    </main>
+    <script>
+      const openBtn = document.querySelector("[data-open-modal]"); //connect by attribute
+      const closeBtn = document.querySelector("#closeDialogBtn");
+      const modal = document.querySelector("#accessibleDialog");
+
+      openBtn.addEventListener("click", () => {
+        modal.showModal();
+      });
+
+      closeBtn.addEventListener("click", () => {
+        modal.close();
+      });
+    </script>
+  </body>
+</html>
