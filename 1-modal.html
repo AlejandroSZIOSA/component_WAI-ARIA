@@ -9,7 +9,8 @@
         display: none;
         position: fixed;
         inset: 0;
-        background: rgb(124, 124, 124);
+        background: rgb(0, 0, 0);
+        opacity: 0.5;
         z-index: 9;
       }
 
@@ -33,6 +34,7 @@
   </head>
   <body>
     <button data-open-modal>Open</button>
+
     <div data-overlay class="overlay"></div>
 
     <!--   <div id="accessibleModal">
@@ -42,7 +44,7 @@
     </div>
  -->
     <div data-modal class="modal">
-      <div>This is a Modal(old way)</div>
+      <div>This is a Modal</div>
       <button data-close-modal>Close</button>
     </div>
 
