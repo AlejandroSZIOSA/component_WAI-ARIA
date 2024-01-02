@@ -10,12 +10,13 @@
       <button data-open-modal>Open Modal Dialog</button>
       <dialog
         id="accessibleDialog"
-        aria-modal="true"
         aria-labelledby="dialogLabel"
         aria-describedby="dialogDesc"
       >
         <h2 id="dialogLabel">Modal Dialog</h2>
-        <p id="dialogDesc">Content</p>
+
+        <!-- PROBLEM: Screen reader do not say Content when modal is showing-->
+        <div id="dialogDesc">This is a modal</div>
 
         <button id="closeDialogBtn">Close</button>
       </dialog>
@@ -27,11 +28,15 @@
 
       openBtn.addEventListener("click", () => {
         modal.showModal();
+        modal.setAttribute("aria-modal", "true"); /* add Aria attribute */
       });
 
       closeBtn.addEventListener("click", () => {
         modal.close();
-        modal.removeAttribute("aria-modal", "false"); //removing attribute
+        modal.removeAttribute(
+          "aria-modal",
+          "false"
+        ); /* removing Aria attribute */
       });
     </script>
   </body>
