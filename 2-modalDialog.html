@@ -8,10 +8,16 @@
   <body>
     <main>
       <button data-open-modal>Open Modal Dialog</button>
-      <dialog id="accessibleDialog">
-        <h2>Modal Dialog</h2>
-        <p>Content</p>
-        <button id="closeDialogBtn">Stäng</button>
+      <dialog
+        id="accessibleDialog"
+        aria-modal="true"
+        aria-labelledby="dialogLabel"
+        aria-describedby="dialogDesc"
+      >
+        <h2 id="dialogLabel">Modal Dialog</h2>
+        <p id="dialogDesc">Content</p>
+
+        <button id="closeDialogBtn">Close</button>
       </dialog>
     </main>
     <script>
@@ -25,6 +31,7 @@
 
       closeBtn.addEventListener("click", () => {
         modal.close();
+        modal.removeAttribute("aria-modal", "false"); //removing attribute
       });
     </script>
   </body>
